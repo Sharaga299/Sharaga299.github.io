@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonKeys - <span class="highlight">Каталог</span> <span class="emoji">🎮</span></title>
+    <link rel="stylesheet" href="../css/catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/catalog.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">NeonKeys</div>
+        <ul>
+            <li><a href="/index.html">Главная <span class="emoji">🏠</span></a></li>
+            <li><a href="catalog.html">Каталог <span class="emoji">🎲</span></a></li>
+            <li><a href="contact.html">Связаться с нами <span class="emoji">📞</span></a></li>
+        </ul>
+    </nav>
+    <section id="catalog">
+        <h2 class="fade-in"><span class="highlight">Каталог</span> <span class="highlight">игр</span> <span class="emoji">🎮</span></h2>
+        <div class="filters fade-in">
+            <input type="text" id="search" placeholder="Поиск по названию 🔍">
+            <select id="sort">
+                <option value="name-asc">По названию (А-Я) <span class="emoji">📅</span></option>
+                <option value="name-desc">По названию (Я-А) <span class="emoji">📅</span></option>
+                <option value="price-asc">По цене (возр.) <span class="emoji">📅</span></option>
+                <option value="price-desc">По цене (убыв.) <span class="emoji">📅</span></option>
+                <option value="rating-desc">По рейтингу <span class="emoji">📅</span></option>
+            </select>
+            <select id="genre">
+                <option value="">Все жанры <span class="emoji">🎯</span></option>
+                <option value="экшен">Экшен</option>
+                <option value="рпг">РПГ</option>
+                <option value="стратегия">Стратегия</option>
+                <option value="симулятор">Симулятор</option>
+            </select>
+        </div>
+        <div class="game-grid" id="game-grid"></div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">NeonKeys</div>
+            <p>© 2025 NeonKeys. Все права защищены. <span class="emoji">📜</span></p>
+            <ul>
+                <li><a href="contact.html">Контакты <span class="emoji">📞</span></a></li>
+                <li><a href="#privacy">Политика конфиденциальности <span class="emoji">🔒</span></a></li>
+                <li><a href="#terms">Условия использования <span class="emoji">📋</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="notification" class="notification"></div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F9FAFB;
+    color: #1F2937;
+    line-height: 1.6;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #1F2937;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3B82F6;
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+#contact {
+    padding: 100px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2, h3, h4 {
+    font-weight: 700;
+    color: #1F2937;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h2:not(.emoji), h3:not(.emoji), h4:not(.emoji) {
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.emoji {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    display: inline-block;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.highlight {
+    color: #3B82F6;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.contact-info {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info a {
+    color: #3B82F6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2563EB;
+}
+
+.map {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.map iframe {
+    border: 0;
+}
+
+.faq {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+details {
+    margin-bottom: 15px;
+}
+
+details summary {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F9FAFB;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+details summary:hover {
+    background-color: #E5E7EB;
+}
+
+details[open] summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+details p {
+    padding: 10px 15px 0;
+    color: #4B5563;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #10B981;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    z-index: 1000;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #4B5563;
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-content ul li {
+    margin: 0 15px;
+}
+
+.footer-content ul li a {
+    color: #1F2937;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+    color: #3B82F6;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .contact-form, .contact-info, .faq {
+        max-width: 100%;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 12px;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+}

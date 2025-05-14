@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonKeys - <span class="highlight">Игра</span> <span class="emoji">🎮</span></title>
+    <link rel="stylesheet" href="../css/game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/game.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">NeonKeys</div>
+        <ul>
+            <li><a href="/index.html">Главная <span class="emoji">🏠</span></a></li>
+            <li><a href="catalog.html">Каталог <span class="emoji">🎲</span></a></li>
+            <li><a href="contact.html">Связаться с нами <span class="emoji">📞</span></a></li>
+        </ul>
+    </nav>
+    <section id="game-page">
+        <div class="game-card fade-in">
+            <img id="game-image" src="" alt="Игра">
+            <div class="game-details">
+                <h2 id="game-title"></h2>
+                <p id="game-description"></p>
+                <p id="game-price"></p>
+                <p id="game-release"></p>
+                <p id="game-rating"></p>
+                <p id="game-developer"></p>
+                <p id="game-region"></p>
+                <button id="buy-button" type="button">Купить ключ <span class="emoji">💳</span></button>
+            </div>
+        </div>
+        <div id="system-requirements">
+            <h3><span class="highlight">Минимальные</span> системные требования <span class="emoji">🛡️</span></h3>
+            <p id="system-reqs"></p>
+        </div>
+        <div id="activation-instructions">
+            <h3>Инструкция по активации <span class="emoji">📜</span></h3>
+            <ol>
+                <li>Запустите Steam.</li>
+                <li>Перейдите в раздел "Игры" и выберите "Активировать в Steam".</li>
+                <li>Введите полученный ключ.</li>
+                <li>Следуйте инструкциям для завершения активации.</li>
+            </ol>
+        </div>
+        <div id="reviews">
+            <h3>Отзывы <span class="emoji">⭐</span></h3>
+            <div id="review-list"></div>
+        </div>
+    </section>
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h3>Оплата <span class="emoji">💳</span></h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-chip"></div>
+                    <div class="card-hologram"></div>
+                    <div class="card-logo">VISA</div>
+                    <div id="card-number-display">**** **** **** ****</div>
+                    <div class="card-details">
+                        <span id="card-holder-display">ИМЯ ВЛАДЕЛЬЦА</span>
+                        <span id="card-expiry-display">MM/YY</span>
+                    </div>
+                </div>
+            </div>
+            <form id="payment-form">
+                <input type="text" id="card-number" placeholder="Номер карты" maxlength="19" required>
+                <input type="text" id="card-holder" placeholder="Имя владельца" maxlength="50" required>
+                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                <input type="text" id="card-cvv" placeholder="CVV" maxlength="3" required>
+                <div class="form-buttons">
+                    <button type="button" id="pay-button">Оплатить <span class="emoji">💳</span></button>
+                    <button type="button" id="clear-form">Очистить</button>
+                </div>
+            </form>
+            <div id="loading" style="display: none;">
+                Обработка платежа<span class="dots"></span>
+            </div>
+            <div id="key-result" style="display: none;">
+                <p>Ваш ключ: <span id="generated-key" class="key-animation"></span></p>
+                <div class="key-buttons">
+                    <button id="copy-key" type="button">Скопировать</button>
+                    <button id="close-key" type="button">Закрыть</button>
+                </div>
+            </div>
+            <div id="notification" class="notification"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">NeonKeys</div>
+            <p>© 2025 NeonKeys. Все права защищены. <span class="emoji">📜</span></p>
+            <ul>
+                <li><a href="contact.html">Контакты <span class="emoji">📞</span></a></li>
+                <li><a href="#privacy">Политика конфиденциальности <span class="emoji">🔒</span></a></li>
+                <li><a href="#terms">Условия использования <span class="emoji">📋</span></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
